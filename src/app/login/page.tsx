@@ -15,7 +15,7 @@ export default function Login() {
                 <p className="text-gray-700">Remember Password</p>
             </div>
             <button className="bg-blue-500 w-100 h-10 text-white rounded-md mt-10 ml-15">Sign In</button>
-            <p className="text-center mt-4">Don't have an account? <a href="" className="text-blue-500">Create Account</a></p>
+            <p className="text-center mt-4">Don&apos;t have an account? <a href="" className="text-blue-500">Create Account</a></p>
         </div>
     </div>
     </div>

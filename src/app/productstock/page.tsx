@@ -1,4 +1,5 @@
 'use client';
+import Image from "next/image";
 import { IoIosSearch } from "react-icons/io";
 import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
 import EditIcon from '@mui/icons-material/Edit';
@@ -22,7 +23,7 @@ const rows: GridRowsProp = [
 const columns: GridColDef[] = [
   { field: 'image', headerName: 'Image', width: 150,
     renderCell: (params) => (
-        <img 
+        <Image 
         src={params.value} 
         alt="product" 
         style={{width: 80, height: 80, borderRadius: '4px', objectFit: 'cover' }} />

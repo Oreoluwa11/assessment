@@ -1,4 +1,6 @@
+'use client';
 import { useState } from 'react';
+import Image from "next/image";
 
 const FlagDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,15 +25,15 @@ const FlagDropdown = () => {
         <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg ring-1 ring-black ring-opacity-5 rounded-md">
           <div className="py-1">
             <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-              <img src="/flags/usa.svg" className="h-5 w-5 mr-3" alt="USA Flag" />
+              <Image src="/flags/usa.svg" className="h-5 w-5 mr-3" alt="USA Flag" />
               English
             </a>
             <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-              <img src="/flags/spain.svg" className="h-5 w-5 mr-3" alt="Spain Flag" />
+              <Image src="/flags/spain.svg" className="h-5 w-5 mr-3" alt="Spain Flag" />
               Español
             </a>
             <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-              <img src="/flags/france.svg" className="h-5 w-5 mr-3" alt="France Flag" />
+              <Image src="/flags/france.svg" className="h-5 w-5 mr-3" alt="France Flag" />
               Français
             </a>
           </div>
