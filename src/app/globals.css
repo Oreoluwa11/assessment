@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+@layer components {
+  input::placeholder {
+    margin-left: 50px;
+  }
+}
