@@ -1,7 +1,7 @@
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import { MdOutlineStarBorderPurple500 } from "react-icons/md";
 import Mycarousel from "../Shadcn/mycarousel"
-import Navbar from "../navbar/page";
+import Navbar from "../components/Navbar";
 export default function Favorites() {
     return <div>
         <Navbar />
