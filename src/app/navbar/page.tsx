@@ -1,9 +1,6 @@
 'use client';
 import Link from 'next/link';
-import Flag from '../flag/page'
 import { useState } from 'react'
-import { IoIosSearch } from "react-icons/io";
-import { BsFillBellFill } from "react-icons/bs";
 import { PiGridFour } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa";
 import { HiOutlineChatAlt2 } from "react-icons/hi";

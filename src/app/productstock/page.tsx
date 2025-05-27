@@ -1,7 +1,6 @@
 'use client';
 import Image from "next/image";
-import { IoIosSearch } from "react-icons/io";
-import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
+import { GridRowsProp, GridColDef } from '@mui/x-data-grid';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { IconButton, Box } from '@mui/material';
