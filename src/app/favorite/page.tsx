@@ -1,10 +1,13 @@
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import { MdOutlineStarBorderPurple500 } from "react-icons/md";
 import Mycarousel from "../Shadcn/mycarousel"
+import Navbar from "../navbar/page";
 export default function Favorites() {
-    return <div className="w-[87%] h-[130vh] flex flex-col ml-51.5 p-5 mx-auto px-[50px] gap-[30px] bg-gray-100 -mt-[970px]">
-        <p className="font-bold text-3xl">Favorites</p>
-    <div className="grid grid-cols-3 gap-[50px] sm:grid gap-[50px]">
+    return <div>
+        <Navbar />
+    <div className=" ml-51.5 p-4 h-[125vh] px-[70px] gap-[30px] bg-gray-100 -mt-[970px] py-8 overflow-x-auto">
+        <p className="font-bold text-4xl mb-5">Favorites</p>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <div className="bg-white rounded-md p-15 w-80">
             <Mycarousel />
@@ -146,5 +149,6 @@ export default function Favorites() {
             </div>
         </div>        
     </div>
+</div>
 </div>;
 }

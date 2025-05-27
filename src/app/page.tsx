@@ -1,13 +1,9 @@
-import  Favorite  from "./favorite/page"
-import Navbar from "../app/components/navbar"
+import Login from "./login/page"
 
 export default function Home() {
   return (
     <div >
-      <Navbar />
-      <main >
-        <Favorite />
-      </main>
+      <Login />
     </div>
   );
 }

@@ -20,7 +20,7 @@ import { LuSettings } from "react-icons/lu";
 export const Navbar = () => {
     console.log("Navbar component");
     const [isOpen, setIsOpen] = useState(false);
-    const toggleMenu = () => {
+    const handleClick = () => {
         setIsOpen(!isOpen);
             }
     
@@ -31,7 +31,11 @@ return <div className='mx-auto' >
             <span className="text-blue-600">Dash</span>Stack
           </p>
           <div className="ig:flex ">
-            <button onClick={toggleMenu} className="text-black ig:flex focus:outline-none">
+            <button onClick={handleClick} 
+            aria-controls={'basic-menu'}
+            aria-haspopup="true"
+            aria-expanded={'true'}
+            className="text-black ">
               <div className="space-y-1 ">  
                 <div className="w-6.5 h-0.5 bg-black rounded-md"></div>
                 <div className="w-6.5 h-0.5 bg-black rounded-md"></div>
@@ -49,39 +53,39 @@ return <div className='mx-auto' >
           </div>
                 
 
-          {/* Mobile Dropdown Menu*/}
+           Mobile Dropdown Menu
           <div className={` ${isOpen ? 'block' : 'hidden'} mt-1`}>
-            <div className="flex flex-col space-y-1">
+            <div className="flex flex-col ">
               <a href="#" className="text-black">Home</a>
               <a href="#" className="text-black">About</a>
               <a href="#" className="text-black">Services</a>
               <a href="#" className="text-black">Contact</a>
             </div>
-          </div>
+          </div> */}
                 
           <form className='w-[500px] relative -ml-[100px] -mt-[10px]'>
-            <div className='relative'>
-              <input type='search' placeholder='Search' className='w-80 p-2 rounded-full bg-gray-100'/>
-              <button className='absolute right-45 top-1/2 -translate-y-1/2 p-4 '>
+            <div className='relative flex'>
+              <input type='search' placeholder='Search' className='w-50 max-w-md px-4 py-2  rounded-full bg-gray-100'/>
+              {/*<button className='absolute right-75 top-1/2 -translate-y-1/2 p-4 '>
                 <IoIosSearch />
-              </button>
+              </button> */}
             </div>
           </form>
                 
-          <div className='relative ml-100'>
+          {/*<div className='relative ml-100'>
             <button className='absolute right-5 top-1/2 -translate-y-1/2 p-4 cursor-pointer'>
               <BsFillBellFill />
             </button>
             <div className='absolute right-7 top-1 -translate-y-1/2 rounded-xl w-4 h-4 bg-red-500 text-white'><span className='ml-1'>3</span></div>
           </div>
-          <Flag />
+          <Flag />*/}
         </div>
 
 
         <p className='text-base ml-15 mt-3'>Dashboard</p>
         <div className='ml-11 mt-5' >
 
-          <div className='mt-2
+          <div className='mt-2 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
               <PiGridFour  />
@@ -94,12 +98,12 @@ return <div className='mx-auto' >
             <button className='absolute mt-1 '>
               <FaRegHeart />
             </button>
-            <Link href="/" className= 'ml-8'>
+            <Link href="/favorite" className= 'ml-8'>
             Favorites
             </Link>
           </div>
 
-          <div className='mt-2
+          <div className='mt-2 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
               <HiOutlineChatAlt2  />
@@ -107,7 +111,7 @@ return <div className='mx-auto' >
             <p className='ml-8'>Inbox</p>
           </div>
         
-          <div className='mt-2
+          <div className='mt-2 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
               <TbListCheck   />
@@ -115,7 +119,7 @@ return <div className='mx-auto' >
             <p className='ml-8'>Order Lists</p>
           </div>
 
-          <div className='mt-2
+          <div className='mt-2 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
               <LiaDatabaseSolid />
@@ -128,7 +132,7 @@ return <div className='mx-auto' >
 
         <div className='ml-11 mt-3' >
           <p className=' text-gray-500'>PAGES</p>
-          <div className='mt-2
+          <div className='mt-2 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
               <FiGift />
@@ -136,7 +140,7 @@ return <div className='mx-auto' >
             <p className='ml-8'>Pricing</p>
           </div>
 
-          <div className='mt-2
+          <div className='mt-2 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
               <VscCalendar />
@@ -144,7 +148,7 @@ return <div className='mx-auto' >
             <p className='ml-8'>Calendar</p>
           </div>
 
-          <div className='mt-2
+          <div className='mt-2 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
               <LiaClipboard />
@@ -152,7 +156,7 @@ return <div className='mx-auto' >
             <p className='ml-8'>To-Do</p>
           </div>
         
-          <div className='mt-2
+          <div className='mt-2 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
               <TbListCheck />
@@ -160,28 +164,28 @@ return <div className='mx-auto' >
             <p className='ml-8'>Contact</p>
           </div>
 
-          <div className='mt-2
+          <div className='mt-2 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
               <LiaDatabaseSolid />
             </button>
             <p className='ml-8'>Invoice </p>
           </div>
-          <div className='mt-2
+          <div className='mt-2 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
              <LiaChartBarSolid />
             </button>
             <p className='ml-8'>UI Elements</p>
           </div>
-          <div className='mt-2
+          <div className='mt-2 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
               <GoPerson />
             </button>
             <p className='ml-8'>Team</p>
           </div>
-          <div className='mt-2
+          <div className='mt-2 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
                <PiGridNine />
@@ -194,14 +198,14 @@ return <div className='mx-auto' >
         <hr className='w-70 border border-gray-200 mt-8' />
 
         <div className='ml-11 mt-10' >
-          <div className='mt-2
+          <div className='mt-2 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
               <LuSettings />
             </button>
             <p className='ml-8'>Settings</p>
           </div>
-          <div className='mt-2 mb-20
+          <div className='mt-2 mb-20 cursor-pointer
             hover:bg-blue-600 p-2 -ml-[10px] rounded-md transition-colors w-40 hover:text-white'>
             <button className='absolute mt-1 '>
               <LuSettings />
