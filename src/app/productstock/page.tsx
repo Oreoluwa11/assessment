@@ -1,9 +1,9 @@
 'use client';
 import Image from "next/image";
-import { GridRowsProp, GridColDef } from '@mui/x-data-grid';
+import { GridRowsProp } from '@mui/x-data-grid';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { IconButton, Box } from '@mui/material';
+import { IconButton } from '@mui/material';
 import Navbar from "../navbar/page"
 
 
@@ -27,25 +27,7 @@ export default function Productstock() {
         
         <div className="flex justify-between items-center mb-2">
           <p className="font-bold text-3xl">Product Stock</p>
-        </div>{/*
-      <div className="hidden md:block" style={{ height: 1000, width: '100%', }}>
-      <DataGrid rows={rows} columns={columns}
-      rowHeight={110} 
-      sx={{
-        '& .MuiDataGrid-cell': {
-          py: 2, // vertical padding (space inside each cell)
-          px: 2, // horizontal padding
-        },
-        '& .MuiDataGrid-columnHeaders': {
-          backgroundColor: '#e5e7eb', // optional: light gray header
-        },
-        '& .MuiDataGrid-row': {
-          borderBottom: '1px solid #e5e7eb', // light gray row divider
-        },
-        }}
-        />
-        </div>*/}
-    
+        </div>
 
         {/* Mobile Cards */}
     <div className="block  space-y-4  ">
