@@ -19,55 +19,6 @@ const rows: GridRowsProp = [
 
 ];
 
-const columns: GridColDef[] = [
-  { field: 'image', headerName: 'Image', width: 150,
-    renderCell: (params) => (
-        <Image 
-        src={params.value} 
-        alt="product" 
-        width= {80}
-        height= {80}
-        style={{ borderRadius: '4px', objectFit: 'cover' }} />
-      ),
-  },
-  { field: 'name', headerName: 'Product Name', width: 250 },
-  { field: 'category', headerName: 'Category', width: 200 },
-  { field: 'price', headerName: 'Price', width: 100 },
-  { field: 'piece', headerName: 'Piece', width: 120 },
-  { field: 'color', headerName: 'Available color', width: 200,
-    renderCell: (params) => (
-        <Box sx={{ display: 'flex', gap: 1.5, marginLeft: 3, }}>
-          {params.value.map((color: string, i: number) => (
-            <Box
-              key={i}
-              sx={{
-                width: 14,
-                height: 14,
-                marginTop: 5,
-                borderRadius: '50%',
-                backgroundColor: color,
-              }}
-            />
-          ))}
-        </Box>
-      ),
-    },
-  
-  { field: 'action', headerName: 'Action', width: 200,
-    renderCell: () => (
-        <>
-          <IconButton color="primary">
-            <EditIcon />
-          </IconButton>
-          <IconButton color="error">
-            <DeleteIcon />
-          </IconButton>
-        </>
-    ),
-  
-   },
-
-];
 
 export default function Productstock() {
     return<div> 
