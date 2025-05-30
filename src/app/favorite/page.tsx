@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 export default function Favorites() {
     return <div>
         <Navbar />
-    <div className=" ml-51.5 p-4 h-[125vh] px-[70px] gap-[30px] bg-gray-100 -mt-[970px] py-8 overflow-x-auto ">
+    <div className=" ml-51.5 w-[87%] p-4 h-[125vh] px-[70px] gap-[30px] bg-gray-100 -mt-[970px] py-8 overflow-x-auto mx-auto ">
         <p className="font-bold text-4xl mb-5">Favorites</p>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
